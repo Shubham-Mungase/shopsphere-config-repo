@@ -1,12 +1,16 @@
-server:
-  port: 8761
-
 spring:
   application:
     name: service-registry
 
   config:
-    import: optional:configserver:http://config-server:8888  # ⚡ Use container name
+    import: optional:configserver:http://localhost:8888 
+    
+  cloud:
+    config:
+      enabled: false   # 🔥 VERY IMPORTANT
+
+server:
+  port: 8761
 
 eureka:
   client:
