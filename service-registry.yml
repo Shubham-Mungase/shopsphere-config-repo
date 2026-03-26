@@ -6,8 +6,7 @@ spring:
     name: service-registry
 
   config:
-    # ⚡ Use container name of Config Server
-    import: optional:configserver:http://config-server:8888
+    import: optional:configserver:http://config-server:8888  # ⚡ Use container name
 
 eureka:
   client:
