@@ -5,8 +5,8 @@ spring:
   application:
     name: service-registry
 
-  config:
-    import: optional:configserver:http://config-server:8888
+   #config:
+    #import: optional:configserver:http://config-server:8888
 
 eureka:
   client:
