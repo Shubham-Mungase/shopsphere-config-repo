@@ -16,3 +16,5 @@ eureka:
 
   server:
     enable-self-preservation: true
+  config:
+    import: optional:configserver:http://config-server:8888
