@@ -1,6 +1,8 @@
 spring:
   application:
     name: service-registry
+  config:
+    import: optional:configserver:http://configserver:8888
     
   cloud:
     config:
