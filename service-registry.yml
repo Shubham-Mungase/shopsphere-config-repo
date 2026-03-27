@@ -10,10 +10,10 @@ spring:
 
 eureka:
   client:
-    register-with-eureka: false   # 🔥 MUST
-    fetch-registry: false         # 🔥 MUST
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka/  # (ignored but safe)
+      defaultZone: http://service-registry:8761/eureka/
 
   server:
     enable-self-preservation: true
