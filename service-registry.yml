@@ -1,20 +1,19 @@
-spring:
-  application:
-    name: service-registry
-  config:
-    import: optional:configserver:http://config-server:8888
-    
-  cloud:
-    config:
-      enabled: false   # 🔥 VERY IMPORTANT
-
 server:
   port: 8761
 
+spring:
+  application:
+    name: service-registry
+
+  config:
+    import: optional:configserver:http://config-server:8888
+
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false   # 🔥 MUST
+    fetch-registry: false         # 🔥 MUST
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # (ignored but safe)
 
   server:
     enable-self-preservation: true
