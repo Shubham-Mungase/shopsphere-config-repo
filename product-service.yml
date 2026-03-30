@@ -27,13 +27,10 @@ management:
         include: "*"
 
   tracing:
+    enabled: true
     sampling:
       probability: 1.0
 
   otlp:
     tracing:
       endpoint: http://localhost:4318/v1/traces
-
-logging:
-  pattern:
-    level: "%5p [%X{traceId},%X{spanId}]"
