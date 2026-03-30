@@ -21,11 +21,6 @@ server:
   port: 8082
 
 management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
   tracing:
     enabled: true
     sampling:
@@ -34,3 +29,8 @@ management:
   otlp:
     tracing:
       endpoint: http://localhost:4318/v1/traces
+
+otel:
+  exporter:
+    otlp:
+      protocol: http/protobuf
