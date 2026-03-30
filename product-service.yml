@@ -26,14 +26,17 @@ management:
     sampling:
       probability: 1.0
 
+  otlp:
+    metrics:
+      export:
+        enabled: false
+
 otel:
   exporter:
     otlp:
       endpoint: http://localhost:4318
       protocol: http/protobuf
 
-management:
-  otlp:
-    metrics:
-      export:
-        enabled: false
+logging:
+  pattern:
+    level: "%5p [%X{traceId},%X{spanId}]"
