@@ -1,26 +1,29 @@
 spring:
   application:
     name: notification-service
-server:
-  port: 1111
 
   datasource:
     url: jdbc:mysql://localhost:3306/notification_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
     password: 7777
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
 
   mail:
     host: smtp.gmail.com
     port: 587
     username: mungaseshubham777@gmail.com
-    password: ynmz evkq ylwz vkcp 
+    password: ynmz evkq ylwz vkcp
     properties:
       mail:
         smtp:
           auth: true
           starttls:
             enable: true
+
+server:
+  port: 1111
