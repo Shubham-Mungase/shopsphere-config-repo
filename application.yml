@@ -1,3 +1,7 @@
+spring:
+  datasource:
+    username: springuser
+    password: pass@777
 logging:
   level:
     root: INFO
