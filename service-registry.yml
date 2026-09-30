@@ -4,10 +4,6 @@ server:
 spring:
   application:
     name: service-registry
-
-  config:
-    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
-
 eureka:
   client:
     register-with-eureka: false
